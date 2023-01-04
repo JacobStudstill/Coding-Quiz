@@ -1,3 +1,9 @@
+html{
+    background-image: url("./studio.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    opacity: .9;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -8,15 +14,18 @@ header{
     justify-content: flex-end;
     height: 240px;
     padding: 10px;
-    color: black;
+    color: white;
     text-align: center;
   }
 .welcome {
+    color:white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
+    background-color: black;
+    
 }
 .welcome h3 {
     max-width:800px;
