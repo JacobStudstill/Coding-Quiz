@@ -1,0 +1,23 @@
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.timer {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 240px;
+    padding: 10px;
+    color: black;
+    text-align: center;
+  }
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.welcome h3 {
+    max-width:800px;
+}
