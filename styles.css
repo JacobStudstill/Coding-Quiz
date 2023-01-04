@@ -7,6 +7,11 @@ html{
 header{
     display: flex;
     justify-content: space-between;
+    color: white;
+}
+.highscore a:hover, :visited, :active, :link{
+    text-decoration: none;
+    color: white;
 }
 .timer {
     display:flex;
@@ -14,19 +19,33 @@ header{
     justify-content: flex-end;
     height: 240px;
     padding: 10px;
-    color: white;
     text-align: center;
   }
-.welcome {
+.main {
     color:white;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    background-color: black;
+    justify-content: center;
+    border-radius: 1000px;
     
+}
+.welcome {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.welcome button {
+    margin-bottom: 1%;
 }
 .welcome h3 {
     max-width:800px;
+}
+.start {
+    margin-bottom: 1%;
+}
+.hide {
+    display:none;
 }

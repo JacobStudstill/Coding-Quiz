@@ -22,17 +22,27 @@
         </div>
     </header>
     <main>
-        <section class = "welcome">
-            <div>
-                <h1>Welcome to the Coding Quiz.</h1>
+        <section class = "main">
+            <div class= "main welcome">
+                <h1>Welcome to the Coding Quiz</h1>
                 <h3>This is a timed code-related quiz. Answer the questions as fast as you can. The time remaining when the test is complete will be your final score.
                  Incorrect answers will subtract time from your timer / score.  
                  </h3>
+                 <button>Start</button>
              </div>
-            <div class="button">
-                <button>Start</button>
+        </section>
+        <section id="questions" class="hide">
+            <h2 class="question-title"></h2>
+            <div id="choices" class="choices">
 
             </div>
+        </section>
+
+        <section id="endscreen" class="hide">
+            <h2>Quiz is complete</h2>
+            <p>Your final score is: <span id="final-score"></span></p>
+            <p>Enter Initials: <input type="text" id="initials"/><button id="submit">Submit</button></p>
+
         </section>
 
     </main>
