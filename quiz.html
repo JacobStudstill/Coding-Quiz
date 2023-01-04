@@ -11,24 +11,17 @@
     <header> 
         <div class="highscore">
             <p><a href="./highscores.html"><strong>View Highscores</strong></a></p>
-
-
-
         </div>
-        <div class= "card timer">
-            <div class = "timer-text">
-            <div class="large-font timer-count"><strong>10</strong></div>
-            <h3>seconds remaining</h3>
-        </div>
+        <div class="timer">Seconds Remaining: <span id="time">0</span></div>
     </header>
     <main>
-        <section class = "main">
+        <section id= "main">
             <div class= "main welcome">
                 <h1>Welcome to the Coding Quiz</h1>
                 <h3>This is a timed code-related quiz. Answer the questions as fast as you can. The time remaining when the test is complete will be your final score.
                  Incorrect answers will subtract time from your timer / score.  
                  </h3>
-                 <button>Start</button>
+                 <button id="start">Start</button>
              </div>
         </section>
         <section id="questions" class="hide">
@@ -44,7 +37,8 @@
             <p>Enter Initials: <input type="text" id="initials"/><button id="submit">Submit</button></p>
 
         </section>
-
+        <script src="./javascript.js"></script>
+        <script src="./questions.js"></script>
     </main>
 </body>
 </html>
