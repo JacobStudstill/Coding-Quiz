@@ -15,34 +15,20 @@ var questions = [
         answer: "parentheses"
     },
     {
-        title: "What is a question",
-        choices: ["yes" , "no" , "maybe", "nope"],
-        answer: "yes"
+        title: "String values must be enclosed within _____ when being assigned to a variable",
+        choices: ["commas" , "curly brackets" , "quotes", "square brackets"],
+        answer: "quotes"
     },
     {
-        title: "What is a question",
-        choices: ["yes" , "no" , "maybe", "nope"],
-        answer: "yes"
+        title: "A very useful tool used during development and debugging for printing content to the debugger is _______",
+        choices: ["terminal / bash" , "Javascript" , "for loops", "console.log"],
+        answer: "console.log"
     },
     {
-        title: "What is a question",
-        choices: ["yes" , "no" , "maybe", "nope"],
-        answer: "yes"
+        title: "What of the following represents a non-existent or an invalid value?",
+        choices: ["null" , "true" , "false", "yes"],
+        answer: "null"
     },
-    {
-        title: "What is a question",
-        choices: ["yes" , "no" , "maybe", "nope"],
-        answer: "yes"
-    },
-    {
-        title: "What is a question",
-        choices: ["yes" , "no" , "maybe", "nope"],
-        answer: "yes"
-    },
-    {
-        title: "What is a question",
-        choices: ["yes" , "no" , "maybe", "nope"],
-        answer: "yes"
-    },
+
     
 ]
