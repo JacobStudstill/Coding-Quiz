@@ -7,15 +7,18 @@ var choicesEl = document.querySelector("#choices");
 var submitBtn = document.querySelector("#submit");
 var startBtn = document.querySelector("#start");
 var initialsEl = document.querySelector("#initials");
+var questionTitle = document.querySelector(".question-title")
 
 
 
 
 
 function startGame() {
-    var startScreenEl = document.querySelector("#main");
-    startScreenEl.setAttribute("class", "hide");
+    var startScreenEl = document.querySelector(".welcome");
+    startScreenEl.setAttribute("class","hide");
     questionsEl.removeAttribute("class");
+    questionTitle.setAttribute("style", "background-color:black; color:white; display: flex; flex-basis: 70; justify-content:center;")
+    choicesEl.setAttribute("style", "background-color:black; color:white; display: flex; flex-basis: 70;flex-direction: column; justify-content:center;")
     timerID = setInterval(countdown, 1000);
     timerEl.textContent = time;
     getQuestion() 
@@ -75,4 +78,4 @@ function questionResponse(event) {
 
 
 
-startBtn.onclick = startGame;
+startBtn.addEventListener("click",startGame);
