@@ -17,8 +17,8 @@ function startGame() {
     var startScreenEl = document.querySelector(".welcome");
     startScreenEl.setAttribute("class","hide");
     questionsEl.removeAttribute("class");
-    questionTitle.setAttribute("style", "background-color:black; color:white; display: flex; flex-basis: 70; justify-content:center;")
-    choicesEl.setAttribute("style", "background-color:black; color:white; display: flex; flex-basis: 70;flex-direction: column; justify-content:center;")
+    questionTitle.setAttribute("style", "background-color:black; color:white; display: flex; justify-content:center;")
+    choicesEl.setAttribute("style", "background-color:black; color:white; display: flex; flex-direction: column; justify-content:center;")
     timerID = setInterval(countdown, 1000);
     timerEl.textContent = time;
     getQuestion() 
@@ -59,21 +59,36 @@ function questionResponse(event) {
         }
         timerEl.textContent = time
     } else {
+
+        //create class for right and assign that class to buttonEl if correct
+        var questionCorrect 
+        questionIndex++
         //make the choice green and add a sound that
         //create class for right and assign that class to buttonEl if correct
     }
-    //move to the question by i ++
+    //Not sure where to put this
+
+    //check if we ran out of question, call endgame, if not out of questions refire the get question function
+
+    //Are these if statements right?
+    if (questionIndex > questionIndex.length){
+        endgame()
+    }
+    if (questionIndex <= questionIndex.length) {
+        getQuestion()
+    }
     //check if we ran out of question, call endgame, if not out of questions refire the get question function
 
 
 }
 
-//endgame()
-
-
-
-
-
+//Check endgame function
+function endgame(){
+    var endScreenEl = document.querySelector("#endscreen");
+    endScreenEl.removeAttribute("class","hide");
+    var finalScore = document.querySelector("#final-score")
+    finalScore.textContent = time
+}
 
 
 
