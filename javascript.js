@@ -58,23 +58,24 @@ function questionResponse(event) {
             time = 0
         }
         timerEl.textContent = time
-    } else {
-
-        //create class for right and assign that class to buttonEl if correct
-        var questionCorrect 
-        questionIndex++
-        //make the choice green and add a sound that
-        //create class for right and assign that class to buttonEl if correct
     }
-    //Not sure where to put this
+    // else {
+
+    //     //create class for right and assign that class to buttonEl if correct
+    //     // var questionCorrect 
+        
+    //     //make the choice green and add a sound that
+    //     //create class for right and assign that class to buttonEl if correct
+    // }
+    questionIndex++
 
     //check if we ran out of question, call endgame, if not out of questions refire the get question function
 
     //Are these if statements right?
-    if (questionIndex > questionIndex.length){
+    if (time <= 0 || questionIndex === questions.length){
         endgame()
     }
-    if (questionIndex <= questionIndex.length) {
+    else{
         getQuestion()
     }
     //check if we ran out of question, call endgame, if not out of questions refire the get question function
@@ -84,13 +85,24 @@ function questionResponse(event) {
 
 //Check endgame function
 function endgame(){
+
+    clearInterval(timerID)
+    questionsEl.setAttribute("class", "hide")
+
     var endScreenEl = document.querySelector("#endscreen");
     endScreenEl.removeAttribute("class","hide");
+
     var finalScore = document.querySelector("#final-score")
     finalScore.textContent = time
+
+}
+
+function saveHighscore(){
+    
 }
 
 
 
 
 startBtn.addEventListener("click",startGame);
+choicesEl.addEventListener("click", questionResponse);
