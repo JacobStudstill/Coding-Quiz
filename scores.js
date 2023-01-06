@@ -7,7 +7,7 @@ function printHighScores() {
         var li = document.createElement("li")
         li.textContent = highscores[i].initials + " - " + highscores[i].score
         var ol = document.querySelector("#highscores")
-        ol.appendChild("li")
+        ol.appendChild(li)
     }
 }
 
@@ -15,3 +15,6 @@ function clearHighscores(){
     window.localStorage.removeItem("highscores")
     window.location.reload()
 }
+
+document.querySelector("#clear").addEventListener("click", clearHighscores)
+printHighScores();

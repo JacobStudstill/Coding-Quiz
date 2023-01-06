@@ -8,6 +8,7 @@ var submitBtn = document.querySelector("#submit");
 var startBtn = document.querySelector("#start");
 var initialsEl = document.querySelector("#initials");
 var questionTitle = document.querySelector(".question-title")
+var feedback = document.querySelector("#feedback")
 
 
 
@@ -18,7 +19,7 @@ function startGame() {
     startScreenEl.setAttribute("class","hide");
     questionsEl.removeAttribute("class");
     questionTitle.setAttribute("style", "background-color:black; color:white; display: flex; justify-content:center;")
-    choicesEl.setAttribute("style", "background-color:black; color:white; display: flex; flex-direction: column; justify-content:center;")
+    // choicesEl.setAttribute("style", "background-color:black; color:white; display: flex; flex-direction: column; justify-content:center;")
     timerID = setInterval(countdown, 1000);
     timerEl.textContent = time;
     getQuestion() 
@@ -40,7 +41,7 @@ function getQuestion(){
     for(var i=0; i < currentQuestion.choices.length; i++){
         var choice = currentQuestion.choices[i];
         var choiceBtn = document.createElement("button")
-        choiceBtn.setAttribute("class", "choice")
+        choiceBtn.setAttribute("class", "choice col")
         choiceBtn.setAttribute("value", choice)
         choiceBtn.textContent = i + 1 + ". " + choice;
         choicesEl.appendChild(choiceBtn);
@@ -54,6 +55,7 @@ function questionResponse(event) {
     }
     if (buttonEl.value !== questions[questionIndex].answer) {
         time -= 10
+        feedback.textContent = "That is incorrect"
         if(time < 0 ) {
             time = 0
         }
@@ -61,11 +63,7 @@ function questionResponse(event) {
     }
     // else {
 
-    //     //create class for right and assign that class to buttonEl if correct
-    //     // var questionCorrect 
-        
-    //     //make the choice green and add a sound that
-    //     //create class for right and assign that class to buttonEl if correct
+    //     feedback.textContent = questions[questionNumber].answer + " is correct!"
     // }
     questionIndex++
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="./styles.css" />
     <title>Coding Quiz Showdown</title>
 </head>
@@ -12,7 +13,7 @@
         <div class="highscore">
             <p><a href="./highscores.html"><strong>View Highscores</strong></a></p>
         </div>
-        <div class="timer">Seconds Remaining: <span id="time">0</span></div>
+        <div class="timer"><strong>Seconds Remaining: <span id="time">0</span></strong></div>
     </header>
     <main>
         <section id="main">
@@ -26,16 +27,18 @@
         </section>
         <section id="questions" class="hide">
             <h2 class="question-title"></h2>
-            <div id="choices" class="choices">
+            <div id="choices" class="choices row row-cols-2">
+                <div id="feedback"></div>
 
             </div>
         </section>
 
         <section id="endscreen" class="hide">
+            <div class="end-style">
             <h2>Quiz is complete</h2>
             <p>Your final score is: <span id="final-score"></span></p>
             <p>Enter Initials: <input type="text" id="initials"/><button id="submit">Submit</button></p>
-
+            </div>
         </section>
         <script src="./javascript.js"></script>
         <script src="./questions.js"></script>

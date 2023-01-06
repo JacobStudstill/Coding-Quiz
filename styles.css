@@ -36,6 +36,8 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1%;
+    text-align: center;
 }
 .welcome button {
     margin-bottom: 1%;
@@ -48,4 +50,45 @@ header{
 }
 .hide {
     display:none;
+}
+.choices {
+    background-color:black; 
+    color:white; 
+    display: flex; 
+    flex-direction: row;
+    justify-content:center;
+}
+.end-style {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    border-width: 2px;
+    text-align: center;
+}
+.highscoreStyle {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color:white;
+}
+.highscoreStyle #sidebyside {
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 1%
+}
+p {
+    margin: 1%;
+    padding: 0;
+}
+
+@media screen and (max-width:1032px){
+    html{
+        background-image: none;
+        background-color: burlywood;
+    }
 }
