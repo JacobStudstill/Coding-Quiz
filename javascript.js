@@ -13,7 +13,7 @@ var feedback = document.querySelector("#feedback")
 
 
 
-
+//Start of the game. Set interval to count down every second
 function startGame() {
     var startScreenEl = document.querySelector(".welcome");
     startScreenEl.setAttribute("class","hide");
@@ -25,6 +25,7 @@ function startGame() {
     getQuestion() 
 }
 
+//Function to count down time 
 function countdown() {
     time--;
     timerEl.textContent = time;
@@ -33,6 +34,7 @@ function countdown() {
     }
 }
 
+//Gets question from the question js page, loops through questions and assigns choices to a button
 function getQuestion(){
     var currentQuestion = questions[questionIndex];
     var titleEl = document.querySelector(".question-title");
@@ -48,6 +50,7 @@ function getQuestion(){
     }
 }
 
+//Get the the question, if answer is not correct, subtract time
 function questionResponse(event) {
     var buttonEl = event.target;
     if (!buttonEl.matches(".choice")){
@@ -65,11 +68,13 @@ function questionResponse(event) {
 
     //     feedback.textContent = questions[questionNumber].answer + " is correct!"
     // }
+
+    // Adds one to the question index
     questionIndex++
 
     //check if we ran out of question, call endgame, if not out of questions refire the get question function
 
-    //Are these if statements right?
+
     if (time <= 0 || questionIndex === questions.length){
         endgame()
     }
@@ -81,13 +86,15 @@ function questionResponse(event) {
 
 }
 
-//Check endgame function
+//Function for when time is up or questions are answered
 function endgame(){
-
+    //Clear time
     clearInterval(timerID)
+    //Hide questions
     questionsEl.setAttribute("class", "hide")
 
     var endScreenEl = document.querySelector("#endscreen");
+    //Remove hide property from section with endsreen id
     endScreenEl.removeAttribute("class","hide");
 
     var finalScore = document.querySelector("#final-score")
@@ -95,10 +102,13 @@ function endgame(){
 
 }
 
+//Get initials and add to local storage if string isnt empty
 function saveHighscore(){
     var initials = initialsEl.value.trim()
     if (initials !== ""){
         var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [] 
+
+        //Creates object for time and initials
         var newScore = {
             score: time,
             initials: initials,

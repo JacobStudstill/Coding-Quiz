@@ -1,3 +1,5 @@
+//Print highscores by ordering them by highscore
+
 function printHighScores() {
     var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [] 
     highscores.sort(function (a,b){
@@ -11,10 +13,12 @@ function printHighScores() {
     }
 }
 
+//Clear highscores from page
 function clearHighscores(){
     window.localStorage.removeItem("highscores")
     window.location.reload()
 }
 
+//Event listener for clear button
 document.querySelector("#clear").addEventListener("click", clearHighscores)
 printHighScores();
