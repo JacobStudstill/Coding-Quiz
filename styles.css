@@ -13,6 +13,7 @@ header{
     text-decoration: none;
     color: white;
 }
+/* Styling for the timer in the top right */
 .timer {
     display:flex;
     flex-direction: row;
@@ -21,6 +22,7 @@ header{
     padding: 10px;
     text-align: center;
   }
+
 #main {
     color:white;
     display: flex;
@@ -29,6 +31,7 @@ header{
     border-radius: 1000px;
     
 }
+/* Styling for the main content that is seen on page load*/
 .welcome {
     background-color: black;
     display: flex;
@@ -58,6 +61,8 @@ header{
     flex-direction: row;
     justify-content:center;
 }
+
+/* Styling for the end dialog */
 .end-style {
     display:flex;
     flex-direction: column;
@@ -68,6 +73,8 @@ header{
     border-width: 2px;
     text-align: center;
 }
+
+/* Styling for the highscore page*/
 .highscoreStyle {
     display:flex;
     flex-direction: column;
@@ -86,6 +93,7 @@ p {
     padding: 0;
 }
 
+/* Changes from the image to a plain background once the screen gets to a certain size */
 @media screen and (max-width:1032px){
     html{
         background-image: none;
